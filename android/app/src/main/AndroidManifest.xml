@@ -4,6 +4,8 @@
         android:label="zaradia"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyBZvoWYwyeOmhAjoX5xuXcas6RIL79dbJQ"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

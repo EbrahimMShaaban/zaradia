@@ -24,11 +24,9 @@ class IntroScreenView extends StatelessWidget {
       backgroundColor: Colors.orange,
       body: OnBoard(
         pageController: _pageController,
-        // Either Provide onSkip Callback or skipButton Widget to handle skip state
         onSkip: () {
           // print('skipped');
         },
-        // Either Provide onDone Callback or nextButton Widget to handle done state
         onDone: () {
           // print('done tapped');
         },
@@ -50,7 +48,6 @@ class IntroScreenView extends StatelessWidget {
           inactiveSize: Size(8, 8),
           activeSize: Size(12, 12),
         ),
-        // Either Provide onSkip Callback or skipButton Widget to handle skip state
         skipButton: TextButton(
           onPressed: () {
             // print('skipButton pressed');
@@ -60,7 +57,6 @@ class IntroScreenView extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        // Either Provide onDone Callback or nextButton Widget to handle done state
         nextButton: OnBoardConsumer(
           builder: (context, ref, child) {
             final state = ref.watch(onBoardStateProvider);
