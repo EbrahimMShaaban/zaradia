@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zaradia/features/location/location_view.dart';
 import 'package:zaradia/features/login/login_view.dart';
 import 'constant.dart';
 import 'core/router/router.dart';
@@ -40,6 +39,14 @@ class MyApp extends StatelessWidget {
               fontWeight: FontWeight.bold
             )
           ),
+bottomNavigationBarTheme: BottomNavigationBarThemeData(
+  type: BottomNavigationBarType.fixed,
+  selectedItemColor: defaultColor,
+  unselectedItemColor: Colors.grey,
+  elevation: 20.0,
+  backgroundColor: Colors.white
+
+)
 //          fontFamily: 'Tajwal'
       ),
     );

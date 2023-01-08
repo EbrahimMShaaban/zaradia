@@ -4,7 +4,10 @@ import 'package:flutter_google_places/flutter_google_places.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_webservice/places.dart';
 import 'package:google_api_headers/google_api_headers.dart';
+import 'package:zaradia/common_component/custom_button.dart';
 import 'package:zaradia/constant.dart';
+import 'package:zaradia/core/router/router.dart';
+import 'package:zaradia/layout/layout_view.dart';
 
 import '../../common_component/custom_app_bar.dart';
 
@@ -53,7 +56,6 @@ class _LocationViewState extends State<LocationView> {
                       ),
                   ),
                   child: Stack(
-                    alignment: AlignmentDirectional.topCenter,
                     children: [
                       GoogleMap(
                         initialCameraPosition: initialCameraPosition,
@@ -63,34 +65,49 @@ class _LocationViewState extends State<LocationView> {
                           googleMapController = controller;
                         },
                       ),
-                      InkWell(
-                        onTap: _handlePressButton,
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Container(
-                            padding: EdgeInsets.all(10.0,),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(4.0),
-                              border: Border.all(
-                                color: defaultColor,
-                                width: 1.0,
-                              )
+                      Align(
+                        alignment: AlignmentDirectional.topCenter,
+                        child: InkWell(
+                          onTap: _handlePressButton,
+                          child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Container(
+                              padding: EdgeInsets.all(10.0,),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(4.0),
+                                border: Border.all(
+                                  color: defaultColor,
+                                  width: 1.0,
+                                )
+                              ),
+                              child: Row(
+                                children: [
+                                Icon(Icons.search,color: Colors.grey,),
+                                SizedBox(width: 10.0,),
+                                Text('ابحث عن الموقع ....',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 15.0,
+                                ),)
+                              ],),
                             ),
-                            child: Row(
-                              children: [
-                              Icon(Icons.search,color: Colors.grey,),
-                              SizedBox(width: 10.0,),
-                              Text('ابحث عن الموقع ....',
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 15.0,
-                              ),)
-                            ],),
                           ),
                         ),
                       ),
-//            ElevatedButton(onPressed: _handlePressButton, child: const Text("Search Places"))
+                      Align(
+                        alignment: AlignmentDirectional.bottomCenter,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: CustomButton(
+                            bgColor: defaultColor,
+                            onPress: (){
+                              MagicRouter.navigateTo(LayoutView());
+                            },
+                            text: 'متابعه',
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),
