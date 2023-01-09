@@ -1,10 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zaradia/core/router/router.dart';
 
 import '../../constant.dart';
 import '../../layout/layout_controller.dart';
 import '../../layout/layout_states.dart';
+import '../profile/profile_view.dart';
+import '../questions/questions_view.dart';
 
 class MoreView extends StatelessWidget {
   @override
@@ -119,7 +122,9 @@ class MoreView extends StatelessWidget {
                             ),
                             SizedBox(height: 10.0,),
                             InkWell(
-                              onTap: (){},
+                              onTap: (){
+                                MagicRouter.navigateTo(QuestionView());
+                              },
                               child: Card(
                                 child: Padding(
                                   padding: const EdgeInsets.all(16.0),
@@ -141,7 +146,9 @@ class MoreView extends StatelessWidget {
                             ),
                             SizedBox(height: 10.0,),
                             InkWell(
-                              onTap: (){},
+                              onTap: (){
+                                MagicRouter.navigateTo(ProfileView());
+                              },
                               child: Card(
                                 child: Padding(
                                   padding: const EdgeInsets.all(16.0),

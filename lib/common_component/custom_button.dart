@@ -38,7 +38,7 @@ class CustomButton extends StatelessWidget {
       onTap: onPress,
       child: Container(
         width: widthButton,
-        height: heightButton ?? MediaQuery.of(context).size.height * 0.06,
+        height: heightButton ?? MediaQuery.of(context).size.height * 0.07,
         decoration: BoxDecoration(
           color: bgColor ?? colorPrimary,
           gradient: bgColor !=null? null:const LinearGradient(
@@ -49,7 +49,7 @@ class CustomButton extends StatelessWidget {
               Color.fromRGBO(134, 159, 216, 1),
             ],
           ),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(8),
           border: Border.all(color: borderColor ?? Colors.white, width: 1),
         ),
         //

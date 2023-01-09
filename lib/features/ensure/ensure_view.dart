@@ -76,7 +76,7 @@ class EnsureView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 5.0),
                             child: CustomTextField(
-                              controller: field1,
+                              controller: field2,
                               keyboardType: TextInputType.number,
                               validator: (value){
                                 if(value!.isEmpty){
@@ -91,7 +91,7 @@ class EnsureView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 5.0),
                             child: CustomTextField(
-                              controller: field1,
+                              controller: field3,
                               keyboardType: TextInputType.number,
                               validator: (value){
                                 if(value!.isEmpty){
@@ -106,7 +106,7 @@ class EnsureView extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 5.0),
                             child: CustomTextField(
-                              controller: field1,
+                              controller: field4,
                               keyboardType: TextInputType.number,
                               validator: (value){
                                 if(value!.isEmpty){

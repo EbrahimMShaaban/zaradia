@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zaradia/features/electric/electric_view.dart';
 
 import '../../constant.dart';
+import '../../core/router/router.dart';
 import '../../layout/layout_controller.dart';
 import '../../layout/layout_states.dart';
+import '../notification/notification_view.dart';
+import '../plumber/plumber_view.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -45,7 +49,7 @@ class HomeView extends StatelessWidget {
                           ),),
                           Text('9957 Kassandra Gardens',
                             style: TextStyle(
-                                fontSize: 14.0,
+                                fontSize: 13.0,
                                 color: Colors.white
                             ),
                             maxLines: 1,
@@ -56,27 +60,32 @@ class HomeView extends StatelessWidget {
                     SizedBox(
                       width: 15.0,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.deepOrange[200],
-                          borderRadius: BorderRadius.circular(10.0)
+                    InkWell(
+                      onTap: (){
+                        MagicRouter.navigateTo(NotificationView());
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.deepOrange[200],
+                            borderRadius: BorderRadius.circular(10.0)
+                        ),
+                        padding: EdgeInsets.all(10.0),
+                        child: Icon(Icons.doorbell_outlined,size: 20.0,color: Colors.white,),
                       ),
-                      padding: EdgeInsets.all(10.0),
-                      child: Icon(Icons.doorbell_outlined,size: 20.0,color: Colors.white,),
                     ),
                   ],
                 ),
               ),
 
               Container(
-                height: 598,
+                height: 600,
                 child: Stack(
                   alignment: AlignmentDirectional.topCenter,
                   children: [
                     Align(
                       alignment: AlignmentDirectional.bottomCenter ,
                       child: Container(
-                        height: 528,
+                        height: 530,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadiusDirectional.only(
@@ -102,38 +111,43 @@ class HomeView extends StatelessWidget {
                             Row(
                               children: [
                                 Expanded(
-                                  child: Container(
-                                    height: 220,
-                                    child: Stack(
-                                      alignment: AlignmentDirectional.topCenter,
-                                      children: [
-                                        Align(
-                                          alignment: AlignmentDirectional.bottomCenter,
-                                          child: Container(
-                                            height: 175 ,
-                                            child: Card(
-                                              elevation: 12.0,
-                                              child: Padding(
-                                                padding: const EdgeInsets.symmetric(vertical: 53,horizontal: 40.0),
-                                                child: Column(children: [
-                                                  Text('كهرباء',
-                                                    style: TextStyle(
-                                                        fontSize: 19,
+                                  child: InkWell(
+                                    onTap: (){
+                                      MagicRouter.navigateTo(ElectricView());
+                                    } ,
+                                    child: Container(
+                                      height: 220,
+                                      child: Stack(
+                                        alignment: AlignmentDirectional.topCenter,
+                                        children: [
+                                          Align(
+                                            alignment: AlignmentDirectional.bottomCenter,
+                                            child: Container(
+                                              height: 175 ,
+                                              child: Card(
+                                                elevation: 12.0,
+                                                child: Padding(
+                                                  padding: const EdgeInsets.symmetric(vertical: 53,horizontal: 40.0),
+                                                  child: Column(children: [
+                                                    Text('كهرباء',
+                                                      style: TextStyle(
+                                                          fontSize: 19,
+                                                          color: defaultColor,
+                                                          fontWeight: FontWeight.bold
+                                                      ),),
+                                                    Text('Electricity',
+                                                      style: TextStyle(
+                                                        fontSize: 16,
                                                         color: defaultColor,
-                                                        fontWeight: FontWeight.bold
-                                                    ),),
-                                                  Text('Electricity',
-                                                    style: TextStyle(
-                                                      fontSize: 16,
-                                                      color: defaultColor,
-                                                    ),),
-                                                ],),
+                                                      ),),
+                                                  ],),
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                        Image(image: AssetImage('assets/images/electric.png'),height: 110,width: 110,),
-                                      ],
+                                          Image(image: AssetImage('assets/images/electric.png'),height: 110,width: 110,),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -141,38 +155,43 @@ class HomeView extends StatelessWidget {
                                   width: 10.0,
                                 ),
                                 Expanded(
-                                  child: Container(
-                                    height: 220,
-                                    child: Stack(
-                                      alignment: AlignmentDirectional.topCenter,
-                                      children: [
-                                        Align(
-                                          alignment: AlignmentDirectional.bottomCenter,
-                                          child: Container(
-                                            height: 175 ,
-                                            child: Card(
-                                              elevation: 12.0,
-                                              child: Padding(
-                                                padding: const EdgeInsets.symmetric(vertical: 53,horizontal: 40.0),
-                                                child: Column(children: [
-                                                  Text('سباكه',
-                                                    style: TextStyle(
-                                                        fontSize: 19,
+                                  child: InkWell(
+                                    onTap: (){
+                                      MagicRouter.navigateTo(PlumberView());
+                                    } ,
+                                    child: Container(
+                                      height: 220,
+                                      child: Stack(
+                                        alignment: AlignmentDirectional.topCenter,
+                                        children: [
+                                          Align(
+                                            alignment: AlignmentDirectional.bottomCenter,
+                                            child: Container(
+                                              height: 175 ,
+                                              child: Card(
+                                                elevation: 12.0,
+                                                child: Padding(
+                                                  padding: const EdgeInsets.symmetric(vertical: 53,horizontal: 40.0),
+                                                  child: Column(children: [
+                                                    Text('سباكه',
+                                                      style: TextStyle(
+                                                          fontSize: 19,
+                                                          color: defaultColor,
+                                                          fontWeight: FontWeight.bold
+                                                      ),),
+                                                    Text('Plumbing',
+                                                      style: TextStyle(
+                                                        fontSize: 16,
                                                         color: defaultColor,
-                                                        fontWeight: FontWeight.bold
-                                                    ),),
-                                                  Text('Plumbing',
-                                                    style: TextStyle(
-                                                      fontSize: 16,
-                                                      color: defaultColor,
-                                                    ),),
-                                                ],),
+                                                      ),),
+                                                  ],),
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                        Image(image: AssetImage('assets/images/plmber.png'),height: 110,width: 110,),
-                                      ],
+                                          Image(image: AssetImage('assets/images/plmber.png'),height: 110,width: 110,),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -203,7 +222,7 @@ class HomeView extends StatelessWidget {
                                           Text('لطلب عبر الوتساب',
                                           style: TextStyle(
                                             color: Colors.green,
-                                            fontSize: 18,
+                                            fontSize: 17,
                                             fontWeight: FontWeight.bold
                                           ),),
                                           Text('ارسل مشكلتك وصوره لها واترك الباقي علينا',
@@ -212,7 +231,6 @@ class HomeView extends StatelessWidget {
                                           style: Theme.of(context).textTheme.bodyText1,)
                                         ],
                                       ),
-
                                   )
                                 ],
                               ),
@@ -224,7 +242,7 @@ class HomeView extends StatelessWidget {
                     Container(
                       width: MediaQuery.of(context).size.width- 60,
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey[100],
                         borderRadius: BorderRadius.circular(14.0)
                       ),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -254,7 +272,7 @@ class HomeView extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Image(image: AssetImage('assets/images/home.png'),height: 150,width: 150,fit: BoxFit.cover,)
+                            Image(image: AssetImage('assets/images/home.png'),height: 130,width: 150,fit: BoxFit.cover,)
                           ],
                         )
                     ),

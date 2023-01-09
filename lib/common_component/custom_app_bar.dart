@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
           const BackButton(
             color: Colors.white,
           ),
-          SizedBox(width: MediaQuery.of(context).size.width *0.25,),
+          SizedBox(width: MediaQuery.of(context).size.width *0.3,),
           CustomText(
             text: text!,
             alignment: Alignment.center,

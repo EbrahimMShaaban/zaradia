@@ -38,6 +38,7 @@ class RegisterView extends StatelessWidget {
                   Row(children: [
                     Expanded(
                       child: CustomTextField(
+                        upperText: 'الاسم الاول',
                         hint: 'الاسم الاول',
                         controller: fName,
                         keyboardType: TextInputType.text,
@@ -52,6 +53,7 @@ class RegisterView extends StatelessWidget {
                     SizedBox(width: 10.0,),
                     Expanded(
                       child: CustomTextField(
+                        upperText: 'الاسم الثاني',
                         hint: 'الاسم الثاني',
                         keyboardType: TextInputType.text,
                         controller: sName,
@@ -64,8 +66,8 @@ class RegisterView extends StatelessWidget {
                       ),
                     ),
                   ],),
-                  SizedBox(height: 15.0,),
                   CustomTextField(
+                    upperText: 'البريد الالكتروني',
                     hint: 'البريد الالكتروني',
                     keyboardType: TextInputType.emailAddress,
                     controller: email,
@@ -76,8 +78,8 @@ class RegisterView extends StatelessWidget {
                       return null;
                     },
                   ),
-                  SizedBox(height: 15.0,),
                   CustomTextField(
+                    upperText: 'رقم اجوال',
                     hint: 'رقم اجوال',
                     controller: phone,
                     keyboardType: TextInputType.phone,
@@ -88,8 +90,8 @@ class RegisterView extends StatelessWidget {
                       return null;
                     },
                   ),
-                  SizedBox(height: 15.0,),
                   CustomTextField(
+                    upperText: 'كلمه السر',
                     hint: 'كلمه السر',
                     secure: true,
                     keyboardType: TextInputType.visiblePassword,
@@ -101,8 +103,8 @@ class RegisterView extends StatelessWidget {
                       return null;
                     },
                   ),
-                  SizedBox(height: 15.0,),
                   CustomTextField(
+                    upperText: 'تاكيد كلمه السر',
                     hint: 'تاكيد كلمه السر',
                     secure: true,
                     keyboardType: TextInputType.visiblePassword,
@@ -114,7 +116,7 @@ class RegisterView extends StatelessWidget {
                       return null;
                     },
                   ),
-                  SizedBox(height: 15.0,),
+                  SizedBox(height: 20.0,),
                   CustomButton(
                     onPress: (){
                       if(formKey.currentState!.validate()){
