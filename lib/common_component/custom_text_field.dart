@@ -64,7 +64,7 @@ class CustomTextField extends StatefulWidget {
     this.fillColor = Colors.white,
     this.textColor,
     this.labelColor,
-    this.radius = 12,
+    this.radius = 8,
     this.verticalMargin = 5,
     this.lableText,
     this.initialValue,
@@ -103,7 +103,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               padding:  const EdgeInsets.symmetric(vertical: 4),
               child: Text(
                 widget.upperText!,
-                style: TextStyle(color: colorPrimary, fontSize: 18),
+                style: TextStyle(color: colorPrimary, fontSize: 14),
               ),
             ),
           GestureDetector(

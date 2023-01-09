@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             bodyText1: TextStyle(
               color: Colors.black,
-              fontSize: 14.0,
+              fontSize: 15.0,
             ),
             bodyText2: TextStyle(
               color: Colors.black,

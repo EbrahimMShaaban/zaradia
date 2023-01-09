@@ -40,6 +40,7 @@ class LoginView extends StatelessWidget {
                     height: 10.0,
                   ),
                   CustomTextField(
+                    upperText: 'رقم اجوال',
                     hint: 'رقم اجوال',
                     controller: phone,
                     keyboardType: TextInputType.phone,
@@ -50,8 +51,8 @@ class LoginView extends StatelessWidget {
                       return null;
                     },
                   ),
-                  SizedBox(height: 15.0,),
                   CustomTextField(
+                    upperText: 'كلمه السر',
                     hint: 'كلمه السر',
                     keyboardType: TextInputType.visiblePassword,
                     secure: true,
@@ -63,7 +64,7 @@ class LoginView extends StatelessWidget {
                       return null;
                     },
                   ),
-                  SizedBox(height: 15.0,),
+                  SizedBox(height: 20.0,),
                   CustomButton(
                     onPress: (){
                       if(formKey.currentState!.validate()){

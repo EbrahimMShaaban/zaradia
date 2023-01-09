@@ -70,7 +70,7 @@ class _LocationViewState extends State<LocationView> {
                         child: InkWell(
                           onTap: _handlePressButton,
                           child: Padding(
-                            padding: const EdgeInsets.all(20.0),
+                            padding: const EdgeInsets.all(16.0),
                             child: Container(
                               padding: EdgeInsets.all(10.0,),
                               decoration: BoxDecoration(
